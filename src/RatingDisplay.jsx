@@ -25,7 +25,6 @@ function RatingDisplay() {
         })
         handleCloseModal();
         alert(`You rated ${newRating} out of 5`);
-        alert(`Rating Average is ${averageRating} out of 5`);
     };
 
     return (
@@ -50,7 +49,7 @@ function RatingDisplay() {
                             <h4>Shirt</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis dignissimos, deserunt .</p>
                             <h4>$60</h4>
-                            <h5>Rating : 1.5</h5>
+                            <h5>Rating : {averageRating ? averageRating : 0}</h5>
                             <StarComponent reviews={averageRating ? averageRating : 0.0} />
                         </div>
                         <div onClick={() => handleOpenModal()} className="footer">Rate This Product</div>
